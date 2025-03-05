@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Object Keys</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <h2>Get Object Keys</h2>
+    <p>Check console for test results.</p>
+
+    <script>
+        // Create the student object
+        const student = {
+            name: "John"
+        };
+
+        // Function to get all keys from the object
+        function getKeys(obj) {
+            return Object.keys(obj);
+        }
+
+        // Testing the function
+        console.log("Test 1:", getKeys(student)); // Expected Output: ["name"]
+
+        // Additional Test Cases
+        const student2 = { name: "Alice", age: 20, city: "New York" };
+        console.log("Test 2:", getKeys(student2)); // Expected Output: ["name", "age", "city"]
+
+        const emptyObject = {};
+        console.log("Test 3:", getKeys(emptyObject)); // Expected Output: []
+    </script>
 
 </body>
-
 </html>
